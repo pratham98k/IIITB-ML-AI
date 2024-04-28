@@ -1,0 +1,30 @@
+python shortcuts for jupiter notebook
+https://gist.github.com/kidpixo/f4318f8c8143adee5b40
+
+juipiter notebook magic command
+https://ipython.readthedocs.io/en/stable/interactive/magics.html
+
+Python Data Types
+https://www.w3schools.com/python/python_datatypes.asp
+
+Operator precedence
+https://docs.python.org/3.7/reference/expressions.html#operator-precedence
+
+=================================================================
+
+You have learnt that variables are nothing but a memory location to store values assigned to them. Some of the properties of these variables are: 
+1)There is no need to declare the data type of the variable as done in other programming languages, such as C, C++ and JAVA
+int c = 5
+
+string name = 'Alex'
+ 
+2)The variable name (or identifier) cannot start with a number, i.e., declaring something like 2name = 7 throws an error.
+
+3)Python is case sensitive or in other words, these variables are case sensitive. This means that declaring  name= 2 & Name = 4 would create two different variables.
+
+
+
+ you saw that the input function always reads data in a string. And to make arithmetic operations the variable needs an integer. So you will need to change one data type to another in Python, this process of changing one data type to another is called typecasting. You saw the process of typecasting in the video above. 
+
+
+
