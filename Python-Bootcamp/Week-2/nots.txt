@@ -1,0 +1,6 @@
+Tupuls
+list
+Dictionaries
+sets
+
+In this session, we will go into the depths of data structures-basically, structures that can hold the data together. A data structure is a particular way of organizing data in a computer so that it can be used effectively. We will cover the four builtin data structures in Python i.e., tuples, lists, dictionaries, and sets, in a fair amount of depth. You will get ample opportunity to practice the exercises shared. Please space your learning throughout the week and try to go through the content multiple times before attempting the exercises.
