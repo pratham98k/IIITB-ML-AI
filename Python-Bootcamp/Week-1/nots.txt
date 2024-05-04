@@ -27,4 +27,13 @@ string name = 'Alex'
  you saw that the input function always reads data in a string. And to make arithmetic operations the variable needs an integer. So you will need to change one data type to another in Python, this process of changing one data type to another is called typecasting. You saw the process of typecasting in the video above. 
 
 
+break 
+
+continue
+
+pass
+https://www.geeksforgeeks.org/break-continue-and-pass-in-python/
+
+
+
 
