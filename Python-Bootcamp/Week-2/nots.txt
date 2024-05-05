@@ -1,6 +1,28 @@
-Tupuls
-list
-Dictionaries
+Tupuls 
+list 
+Dictionaries 
 sets
 
+
+print(  x , end = '')
+
 In this session, we will go into the depths of data structures-basically, structures that can hold the data together. A data structure is a particular way of organizing data in a computer so that it can be used effectively. We will cover the four builtin data structures in Python i.e., tuples, lists, dictionaries, and sets, in a fair amount of depth. You will get ample opportunity to practice the exercises shared. Please space your learning throughout the week and try to go through the content multiple times before attempting the exercises.
+
+
+
+
+
+
+A tuple contains a sequence of comma-separated values within parentheses. An important feature of a tuple is immutability, which means the elements of a tuple cannot be altered. It is used to store data such as employee information, which is not allowed to be changed.
+ 
+For example: ('Gupta', 24 , 'Project Manager')
+Here, we are storing the employee information name, age and designation in the form of a tuple. This makes this information unchangeable or immutable.
+ 
+One crucial point to observe from the list of examples covered in the video is that a tuple can also be defined without using parentheses. For example:
+
+X = 1, 2, 3, 4 → makes X a tuple
+ 
+Accessing the elements of tuples is similar to accessing elements in a list. You can use the same indexing method. In indexing of list, each character is assigned an index; similarly, each element is given an index in a tuple. Take a look at the upcoming video:
+
+
+https://drive.google.com/drive/folders/1tgkdNmmHWf2O2p38GLIbOm0cRrdEwnM8?usp=sharing
