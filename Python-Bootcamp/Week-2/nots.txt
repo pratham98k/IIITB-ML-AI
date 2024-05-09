@@ -26,3 +26,12 @@ Accessing the elements of tuples is similar to accessing elements in a list. You
 
 
 https://drive.google.com/drive/folders/1tgkdNmmHWf2O2p38GLIbOm0cRrdEwnM8?usp=sharing
+
+https://docs.python.org/3/tutorial/datastructures.html
+
+https://runestone.academy/ns/books/published/pythonds/Introduction/GettingStartedwithData.html#built-in-collection-data-types
+
+https://www.shiksha.com/online-courses/articles/difference-between-sort-and-sorted-in-python/#:~:text=The%20primary%20difference%20between%20sort,returns%20a%20new%20sorted%20list.
+
+https://technicalmasterblog.wordpress.com/2019/03/14/in-python-if-i-put-a-list-inside-a-tuple-can-i-change-the-contents-of-that-list-elements/
+
