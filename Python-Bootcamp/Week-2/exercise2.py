@@ -24,13 +24,23 @@ Sample Output : 3
 
 
 '''
+import ast
 
-input_list_str = input()
-input_list = input_list_str.strip("[]").split(", ")
-K = int(input())
+#Take input
+input_list = ast.literal_eval(input())
+K= int(input())
 
-print(input_list[0])
-print(len(input_list[0]))
+# Initialising a count variagble that tracks the number of elements in the list
+# with length >k
+count = 0
+
+#Looping through the list and check the length of each element. Increase the count by 1 if the 
+#length is greater than K
 for i in input_list:
-    print(len(i))
+	if len(i)>=K:
+	    count=count+1
+	    
+print(count)
+
+
 
