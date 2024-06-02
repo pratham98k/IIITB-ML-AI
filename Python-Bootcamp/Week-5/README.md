@@ -56,5 +56,13 @@ dataframe.describe(): This function produces descriptive statistics for the data
  
 
 
+ https://www.youtube.com/watch?v=SYNEHBofpGE
+
+
+ https://www.youtube.com/watch?v=txMdrV1Ut64
+
  
+
+
+
 

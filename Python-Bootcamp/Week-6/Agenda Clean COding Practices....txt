@@ -1,0 +1,88 @@
+Agenda: Clean COding Practices...
+
+1. Basics of clean coding
+
+2. PEP 8 for python
+
+3. Cases Four types
+
+4. DRY, KISS.....
+
+5. Writing Documents
+
+Activity 1: Calculate the simple and compound interest:
+
+Input: Principal Amount, Rate of Interest, year (default 0ne year)
+
+Two functions: simple interest and compound interest
+
+Output: print the values of SI and CI
+
+
+
+File Name: 1. File Name?
+
+Wrong 25Tapan, Tapan Jain 
+
+Avoid Poor Naming
+
+Naming Conventions
+1. camelCase  iPhone, intUserAge, numberOfDonuts
+2. PascalCase: NumberOfDonuts
+3. snake_case: constants
+4. kebab case: kebab-case landing-page.html
+
+Python enhancement proposal 8
+1. Indentation: 4 spcaes not a tab key
+
+2. Line length max 79 characters
+
+3. Blank line: two lines - top level functions and classes, one line 
+
+4. Imports : Three section standard, third party library, local imports (alphabetical)
+
+5. Naming conventions
+
+6. COmments: 
+
+7. function and method definition
+
+8. String quotes
+
+9. White spaces  contacts(: ,)  right contacts(:,)
+
+principal = float ( input( 'Enter the amount: ')
+
+
+DRY: Don’t Repeat Yourself
+Avoid Duplication
+
+KISS (Keep It Simple, Stupid) 
+
+
+SOLID
+
+S: Single Reposibility--- clarity and ease of maintenance
+O: Open / closed principle --- open extension close for modification 
+L: Liskov Substitution Pr --- Superclass replace with subclass
+I: Interface Segregation  --- interface divide into smaller part
+D: Dependency Inversion ---- high level not depends upon low level
+
+
+
+
+
+
+
+YAGNI
+YAGNI principle ("You Aren't Gonna Need It") 
+
+
+
+
+
+
+
+
+
+
