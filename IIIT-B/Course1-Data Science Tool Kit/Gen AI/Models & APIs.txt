@@ -1,0 +1,63 @@
+Models & APIs
+Kshitij started the discussion of the generative AI software stack by talking about the different categories of generative AI models. Some examples of models that lie within the four categories described by Kshitij are given below. We strongly encourage you to follow these links to compare and contrast these models. 
+ 
+
+Closed LLMs
+
+PaLM 2 by Google
+
+LLaMA by Meta
+
+Claude by Anthropic
+
+Cohere
+
+Open LLMs
+
+HuggingChat
+
+Dolly by Databricks
+
+StableLM by Stability AI
+
+OpenLLaMA by UC Berkeley
+
+Image Models
+
+Midjourney
+
+DALL-E 2 by OpenAI
+
+StableDiffusion by Stability.ai
+
+Runway
+
+ Music Models
+
+ 
+
+ 
+
+MusicLM by Google
+
+MusicGen by Meta
+
+ 
+
+Although these are the four categories of models that Kshitij talked about in detail, models that don’t neatly fall into these four categories also exist. You have seen some of these before in the previous segments; for example, GitHub Copilot for generating code, Runway.ai for generating videos, and so on.
+
+Vector Databases
+After talking about the different LLMs and APIs that can be used in the generative AI stack, Kshitij talked about vector databases. Vector databases provide a new way of structuring data that improves the performance of the database in multiple ways. 
+
+ 
+
+In a nutshell, vector databases store the data in the form of high-dimensional vectors which can be achieved using a transformation or an embedding function. These high-dimensional vectors allow for a faster search using a technique called semantic similarity. Instead of relying on conventional approaches such as querying databases using precise matches or predetermined criteria, a vector database allows you to locate data that is most similar or relevant by considering their semantic or contextual significance.
+
+Some examples of vector databases are given below:
+
+Pinecone
+Chroma
+Qdrant
+ 
+
+In the next video, Kshitij will continue his exposition of the generative AI software stack.
