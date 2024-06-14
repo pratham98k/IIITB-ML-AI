@@ -1,0 +1,7 @@
+2022-07-03 19:39:41,729 Started Execution : Case 1
+2022-07-03 19:40:08,269 invalid literal for int() with base 10: '22steve'
+2022-07-03 19:40:14,754 integer division or modulo by zero
+2022-07-03 19:40:14,755 Execution ended : Case_1
+2022-07-03 19:40:14,755 Started Execution : Case 2
+2022-07-03 19:40:14,755 [Errno 2] No such file or directory: 'dataset.csv'
+2022-07-03 19:40:14,755 Started Execution : Case 2
