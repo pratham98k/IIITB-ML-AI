@@ -48,4 +48,34 @@ The program will start simple and become more difficult towards the end. So, to 
 
 Although the team at upgrad and the faculty here at IIITB are here to guide you, always remember that the best learning happens when you do something on your own. So, always give your best and you will succeed in the program.  
 
+ =============================================================================================================================================================================================================================
+
+ Visualisations - Some Examples
+
+
+Cricket
+https://gramener.com/cricket/
+
+You saw how a treemap diagram showed how multiple companies and sectors react to the budget. You can find the interactive graph
+
+Market movement and Budget
+https://gramener.com/budget/?Year=2007
+
+
+##Facts and Dimensions##
+
+Graphics and visuals, when used intelligently and innovatively, can convey a lot more than what raw data alone can. Matplotlib serves the purpose of providing multiple functions to build graphs from the data stored in your lists, arrays, etc. So, let’s start with the first lecture on Matplotlib.
+
  
+
+Before we start discussing different types of plots, you need to learn about the elements that help us create charts and plots effectively. There are two types of data, which are as follows:
+
+Facts
+
+Dimensions
+
+Facts and dimensions are different types of variables that help you interpret data better. Facts are numerical data, and dimensions are metadata. Metadata explains the additional information associated with the factual variable. Both facts and dimensions are equally important for generating actionable insights from a given data set. For example, in a data set about the height of students in a class, the height of the students would be a fact variable, whereas the gender of the students would be a dimensional variable. You can use dimensions to slice data for easier analysis. In this case, the distribution of height based on the gender of a student can be studied.
+
+
+Identifying facts and dimensions among variables effectively will help you start the analysis of a given data set.
+
