@@ -79,3 +79,47 @@ Facts and dimensions are different types of variables that help you interpret da
 
 Identifying facts and dimensions among variables effectively will help you start the analysis of a given data set.
 
+As you saw in the video above, the subpackage pyplot is used to build plots and graphs throughout this session. To load the subpackage, you need to run the following command:
+
+
+
+
+
+
+
+
+ 
+
+import matplotlib.pyplot as plt
+ 
+
+To recap, Matplotlib allows you to use a simple and intuitive workflow to create plots. The important Matplotlib commands used in the video above are as follows:
+
+plt.bar(x_component, y_component): Used to draw a bar graph
+plt.show(): Explicit command required to display the plot object
+A bar graph is helpful when you need to visualise a numeric feature (fact) across multiple categories. In the example covered in the video, you plotted the sales amount (numeric feature) under three different product categories. Using the bar graph, you could easily distinguish between the performance of these categories.
+
+
+Let’s watch the next video in which Behzad will demonstrate how to add elements to our graph to make it more easily understandable.
+
+
+In the video above, you learnt the different ways in which you can modify your chart to make it more understandable. You can use the following code to add a title and labels to your graph:
+
+plt.xlabel(), plt.ylabel(): Specify labels for the x and y axes
+plt.title(): Add a title to the plot object.
+You can also try to make the charts more appealing by using different attributes such as font size and colour. Adding labels and a title to your plot helps the audience interpret the graphs easily and also relays the required information to the viewer.
+
+
+You can use the attributes of plt.bar() to make the desired changes to the bars of a graph. For example, you can use the following code to change the values and ticks on the x and y axes of a graph:
+
+plt.yticks(tick_values, tick_labels)
+ 
+
+After making all the changes demonstrated in the video, your graph will look like the one given below. 
+
+
+##matplotlib documentation
+
+https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.bar.html#matplotlib.pyplot.bar
+
+
