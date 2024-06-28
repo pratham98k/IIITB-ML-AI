@@ -176,3 +176,46 @@ As you can see in the figure above, the products that were traded in India are m
 In this segment, you learnt how a scatter plot helps you visualise two numeric variables. Attempt the following questions to cement the concepts that were covered in this segment. 
 
 [Note: Please use the updated matplotlib documentation here]
+https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.scatter.html?highlight=scatterplot
+
+
+Scatterplot
+Select the cases where a scatterplot would be helpful in generating insights.
+(More than option one can be correct.)
+
+
+To check whether a relationship exists between the age of a person and their income.
+
+✓ Correct
+You missed this!
+Feedback:
+A scatterplot shows the relationship between two sets of data. Hence, this is the correct option.
+
+
+To check whether there are any irregular entries in the data range.
+
+✕ Incorrect
+Feedback:
+A scatterplot can sometimes reveal outliers but not always. Hence, this is not the correct answer.
+
+
+To check whether stock prices are positively related to the profit of a company.
+
+✓ Correct
+You missed this!
+Feedback:
+Since a scatterplot helps to visualise the relationship between two sets of data, it also reveals whether they are related positively or negatively.
+
+
+To understand the distribution of the salaries of the employees in a company.
+
+✕ Incorrect
+Feedback:
+The distribution of data can be better visualized using distribution plot which requires one input, whereas a scatterplot needs two variables as input.
+
+Which attribute helps set the transparency of points in a scatterplot?
+alpha
+
+✓ Correct
+Feedback:
+This is the correct attribute. You can assign a value between 0 (transparent) and 1 (opaque).
