@@ -156,10 +156,10 @@ plt.scatter(profit[product_category == "Furniture"], sales[product_category == "
 for xy in zip (profit[country == "India"], sales[country == "India"]):
 	plt.annotate(s = "India", xy = xy)
 
-# Adding and formatting title
+## Adding and formatting title
 plt.title("Sales versus Profits across various Countries and Product Categories\n", fontdict={'fontsize': 20, 'fontweight' : 5, 'color' : 'Green'})
 
-# Labeling Axes
+## Labeling Axes
 plt.xlabel("Profit", fontdict={'fontsize': 12, 'fontweight' : 5, 'color' : 'Brown'})
 plt.ylabel("Sales", fontdict={'fontsize': 12, 'fontweight' : 5, 'color' : 'Brown'})
 
@@ -170,3 +170,9 @@ plt.show()
 
 After using the command to add a note, your scatter plot will look like the one given below. 
 
+As you can see in the figure above, the products that were traded in India are marked. This is how the annotate statement that was added to a point in the scatter plot helps you distinguish the data points. 
+
+
+In this segment, you learnt how a scatter plot helps you visualise two numeric variables. Attempt the following questions to cement the concepts that were covered in this segment. 
+
+[Note: Please use the updated matplotlib documentation here]
