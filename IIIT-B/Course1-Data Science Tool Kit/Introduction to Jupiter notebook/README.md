@@ -66,3 +66,5 @@ https://gist.github.com/kidpixo/f4318f8c8143adee5b40
 Jupiter notebook magic commands
 https://ipython.readthedocs.io/en/stable/interactive/magics.html
 
+
+
