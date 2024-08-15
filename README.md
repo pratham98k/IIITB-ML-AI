@@ -5,7 +5,7 @@ studentsupport@upgrad.com
 
 
 Level 1 Escalation mlescalations@upgrad.com
-Level 1 Escalation escalation.l2@upgrad.com
+Level 2 Escalation escalation.l2@upgrad.com
 Level 3 Escalation escalation.l3@upgrad.com
 
 Over the course of the program, you will be engaging in the following activities that go into the calculation of your Cumulative Grade Point Average (CGPA) at the end of the program:
