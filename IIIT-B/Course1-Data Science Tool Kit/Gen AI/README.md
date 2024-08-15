@@ -38,3 +38,21 @@ Generative AI will transform the data analyst role by automating routine tasks, 
 
 The current program that you are about to embark upon helps you in implementing the GenAI concepts on the top of fundamentals of machine learning. So we hope your are excited for your journey ahead!
 
+
+
+Session Summary
+You have now completed the first session of this module. In this session, you got an overview of the landscape of generative AI. You learnt about the various generative AI tools that exist out there and explored some of them. Essentially, in this session, you:
+
+Looked at the meteoric rise of generative AI
+Explored some noteworthy products and applications both on the consumer and enterprise sides. Some examples of the products that you explored are:
+ChatGPT
+Midjourney
+BloombergGPT
+Github Copilot
+Defined generative AI
+Explored the tools and applications that lie within the generative AI software stack. Some examples of the tools you explored are:
+ChatGPT API
+Pinecone
+Langchain
+Vertex AI
+Before moving forward, summarize your key takeaways from this session.
