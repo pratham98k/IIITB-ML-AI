@@ -104,3 +104,22 @@ The first and third conditions were satisfied, whereas the second condition was 
 
 
 
+
+
+Histograms vs Bar Plots
+You have already studied bar plots in the previous module. Now it is a common misconception to confuse them with histograms. To understand the difference try analysing the following two situations and then choose the correct option:
+
+ 
+
+Situation A - You want to visualise the total number of runs scored by MS Dhoni in a single year against all the teams he has played against.
+
+Situation B - You want to visualise the spread of the runs scored by MS Dhoni in a single year.
+
+Situation A requires a bar plot whereas Situation B requires a histogram.
+
+✓ Correct
+Feedback:
+A Histogram plots the frequency of a numeric variable, whereas the Bar plot shows the aggregation of a certain numerical entity for some categorical variable. In Situation A, you are analysing the total sum of runs, which is a numeric variable for all the teams, which is a categorical variable. Hence it will need a bar plot. For Situation B, you're understanding the spread of a numeric variable by checking the frequency. Hence a histogram will be used here.
+
+
+
