@@ -122,4 +122,94 @@ Feedback:
 A Histogram plots the frequency of a numeric variable, whereas the Bar plot shows the aggregation of a certain numerical entity for some categorical variable. In Situation A, you are analysing the total sum of runs, which is a numeric variable for all the teams, which is a categorical variable. Hence it will need a bar plot. For Situation B, you're understanding the spread of a numeric variable by checking the frequency. Hence a histogram will be used here.
 
 
+==========================================================================================================================================================================================================
+
+### SeaBorn
+
+Distribution Plots
+In the previous session, you learnt about the basic data-handling and data-cleaning tasks that were essential to be performed. In this session, you will begin the journey with Seaborn library and start extracting insights. Recall that the target variable for this case study is the Rating column. The main task is to analyse this column and compare it with other variables to observe how the ratings change through different categories.
+
+
+NOTE: The distplot function is deprecated, but you can still use it. It will stop working in Seaborn 0.14.
+
+It has been replaced by two different functions: 
+
+
+sns.histplot():
+It creates a histogram for a single continuous variable.
+
+sns.histplot(data=None, *, x=None, y=None, hue=None)
+
+sns.displot():
+This function is more flexible than sns.distplot().
+It creates a complete grid of distribution plots in one go. You can use it for creating histograms, KDE plots, or other distribution visualizations.
+
+Try this code:
+
+#Create a distribution plot for rating
+sns.displot(inp1.Rating, kde=True)
+plt.show()
+ 
+
+ 
+
+So, you have plotted a distribution plot to check the distribution of ratings using both the Matplotlib function and the Seaborn functions. In the latter case, you must have noticed that instead of the hist command, you are now using a distplot or a distribution plot.The corresponding Seaborn command is sns.distplot(inp1.Rating). 
+
+
+You can go through distplot’s documentation here to learn more about the various parameters that can be used. Notice that this view is quite different from the histogram plot that we had obtained earlier in Matplotlib.
+
+The difference arises due to the fact that instead of calculating the ‘frequency’, the distplot in Seaborn directly computes the probability density for that rating bucket. And the curve (or the KDE as noted in the documentation for Seaborn) that gets drawn over the distribution is the approximate probability density curve.*
+
+
+Coming back to the visualisation, the bars that get plotted in both the cases are proportional. For example, the maximum frequency occurs around the 4-4.5 bucket in the histogram plotted by matplotlib. Similarly, the maximum density also lies in the 4-4.5 bucket in the distplot.
+
+ 
+
+The advantage of the distplot view is that it adds a layer of probability distribution without any additional inputs and preserves the same inter-bin relationship as in the Matplotlib version. This statistical view of things is also far more informative and aesthetic than the earlier one.
+
+ 
+
+You are expected to go through the Seaborn documentation from the link given above and answer the following questions.
+
+
+So, after changing the number of bins to 20, you were able to observe that most of the ratings lie in the 4-5 range. This is quite a useful insight, which highlights the peculiarities of this domain, as mentioned by Rahim. If people dislike an app, they don’t generally wait to give it bad ratings; rather, they go ahead and remove it immediately. Therefore, the average ratings of the apps are pretty high.
+
+ 
+
+Also, you learnt about some more customisations that can be done on the same view. You can change the colour of the view and even use Matplotlib functionalities on top of Seaborn to make your graphs more informative. 
+
+
+Additional Notes:
+
+*The terms “Probability Density” and “Probability Density Curve” may seem a bit alien to you right now if you do not have the necessary statistical background. But don’t worry, you will learn about them in a future module on Inferential Statistics. However, if you’re still curious, you can take a look at this link for further understanding.
+Another chart analogous to the histogram is the countplot. It essentially plots the frequency of values for a categorical variable. Basically, the values are the same as when you take a value_counts() for that variable. Take a look at its documentation to understand how it is implemented.
+Now that you are reasonably proficient in creating a distplot and performing some basic customisations, in the next segment, let's dive even deeper into the different ways in which you can customise a plot. 
+
+https://seaborn.pydata.org/generated/seaborn.countplot.html
+
+
+https://www.khanacademy.org/math/statistics-probability/random-variables-stats-library/random-variables-continuous/v/probability-density-functions
+
+Styling Options
+As discussed earlier, one of the biggest advantages of using Seaborn is that you can retain its aesthetic properties and also the Matplotlib functionalities to perform additional customisations. Before we continue with our case study analysis, let’s study some styling options that are available in Seaborn.
+
+As you just learnt, you can use several styling options by using the sns.set_style() function. This gives you control over the way the axes and grid are presented. Here’s the link to its official documentation. Given below are certain style options that you can use for Seaborn in conjunction with the original customisations.
+
+You should go ahead and try out the styling options and select the one that suits you the best and stick to it for the rest of the case study demonstration. In the next segment, you will explore the case study data using pie charts and bar graphs from the seaborn library. 
+
+
+
+### Scatter Plots
+
+Previously, you had dealt with only a single numeric column and therefore used either a box-plot or a histogram to portray the insights visually. What about two numeric columns, say Rating and Size? If you want to plot the relationship between two numeric variables, you will be using something known as a scatter plot. In the following video, Rahim will explain the situations when a scatter plot can be used. 
+
+Scatter plots are perhaps one of the most commonly used as well one of the most powerful visualisations you can use in the field of machine learning. They are pretty crucial in revealing relationships between the data points and you can generally deduce some sort of trends in the data with the help of a scatter plot. 
+
+ 
+
+The “Sales and Discount” example that you had seen earlier at the beginning of the module is an example of a scatter plot ( technically these are 4 different scatter plots, each of them showing a different city)
+
+
+
+
 
