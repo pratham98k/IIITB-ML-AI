@@ -1,0 +1,30 @@
+Guidelines for In-Module Questions
+The in-video and in-content questions for this module are not graded. Note that graded questions are given on a separate page labelled 'Graded Questions' at the end of each session. The graded questions in these sessions will adhere to the following guidelines:
+
+ 
+
+ 	First Attempt Marks	Second Attempt Marks
+Question with 2 Attempts	10	5
+Question with 1 Attempt	        10	0
+
+
+ 
+Guidelines for coding console questions
+The lectures are interspersed with coding consoles to help you practise writing Python code. You will be given a brief problem statement and some pre-written code. You can write the code in the provided space, verify your answer using test cases, and submit when you are confident about the answer.
+
+ 
+
+Note that the coding console questions are non-graded. Some instructions for these questions are as follows:
+
+Ignore the pre-written code on the console. Please don't change it.
+Write your answer where you're asked to write it.
+You may run and verify your codes any number of times.
+
+People you will hear from in this session:
+Subject Matter Expert:
+
+S Anand
+
+CEO, Gramener
+
+Gramener is one of the most prominent data analytics and visualisation companies in India. Anand, currently the CEO, was previously the Chief Data Scientist at Gramener and has extensive experience in management consulting and equity research.
