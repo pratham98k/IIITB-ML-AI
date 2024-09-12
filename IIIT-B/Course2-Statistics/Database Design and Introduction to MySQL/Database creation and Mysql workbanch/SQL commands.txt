@@ -1,0 +1,18 @@
+
+CREATE TABLE India (
+    Matches_played INT,
+    Matches_won INT,
+    Matches_lost INT,
+    Net_run_rate DECIMAL(4,3),
+    Points INT
+);
+
+====================================
+
+CREATE TABLE Employee (
+    EmployeeID INT PRIMARY KEY,
+    FirstName VARCHAR(50),
+    LastName VARCHAR(50),
+    Department VARCHAR(50),
+    Salary DECIMAL(10, 2)
+);

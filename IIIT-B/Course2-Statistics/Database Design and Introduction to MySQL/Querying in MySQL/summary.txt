@@ -1,0 +1,64 @@
+select (attributes)
+
+from (table)
+
+where (filter_condition)
+
+group by (attributes_to_be_grouped_upon)
+
+having (filter_condition_on_grouped_values)
+
+order by (values)
+
+limit (no_of_values_to_display);
+
+ 
+
+You also learnt about the following important concepts related to basic SQL querying:
+
+Relational, arithmetic and logical operators
+Aggregate functions
+Regular expressions
+Nested queries
+Common Table Expressions
+Views
+Advantages of views over CTEs
+
+=================================================
+
+Alright! It seems like you're looking to understand the fundamentals of SQL, including basic queries and more advanced concepts like aggregate functions, nested queries, and views. Let's break this down into manageable sections, and I'll guide you through each part. How does that sound?
+
+Here's a rough plan for the 30 minutes:
+
+### 1. **Basic SQL Query Structure (10 minutes)**
+   - **SELECT**: Choosing the columns/attributes.
+   - **FROM**: Specifying the table.
+   - **WHERE**: Filtering conditions on rows.
+   - **GROUP BY**: Grouping rows by specified columns.
+   - **HAVING**: Filtering grouped rows.
+   - **ORDER BY**: Sorting the results.
+   - **LIMIT**: Restricting the number of rows displayed.
+   
+   I'll walk you through the structure step-by-step. We can discuss each part and maybe even construct a sample query.
+
+### 2. **Operators, Aggregate Functions, and Expressions (5 minutes)**
+   - **Relational and logical operators**: `=`, `>`, `<`, `AND`, `OR`.
+   - **Arithmetic operators**: `+`, `-`, `*`, `/`.
+   - **Aggregate functions**: `COUNT`, `SUM`, `AVG`, `MIN`, `MAX`.
+   - **Regular expressions**: How they can be used in SQL, especially with the `LIKE` keyword.
+
+### 3. **Nested Queries and CTEs (8 minutes)**
+   - **Nested Queries**: Queries within queries (subqueries).
+   - **CTEs (Common Table Expressions)**: Declaring temporary result sets for better readability.
+   
+   We'll explore when to use subqueries vs. CTEs, and I'll explain their benefits.
+
+### 4. **Views and their Advantages Over CTEs (5 minutes)**
+   - **Views**: Stored queries that can be reused.
+   - **Differences from CTEs**: Persistent vs. temporary, performance considerations.
+
+Would you like to start with a simple SQL query, or should we jump directly into a specific topic? Let me know if this plan aligns with your expectations!
+
+
+
+https://jovian.com/sanj-iimi

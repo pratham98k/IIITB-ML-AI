@@ -1,0 +1,82 @@
+Let's enrich the `students` and `employees` tables with more data so that you can practice with more complex queries. Then, I'll show you a more complex SQL example that uses joins, aggregate functions, subqueries, and grouping.
+
+### 1. **Inserting More Values into the `students` Table**
+
+```sql
+INSERT INTO students (name, age, grade) VALUES
+('George', 21, 'C'),
+('Hannah', 23, 'A'),
+('Ian', 20, 'B'),
+('Jessica', 22, 'C'),
+('Kevin', 19, 'A'),
+('Liam', 18, 'B'),
+('Mia', 24, 'C'),
+('Nina', 21, 'A'),
+('Olivia', 25, 'B'),
+('Paul', 23, 'A'),
+('Quinn', 22, 'C'),
+('Rachel', 24, 'B');
+```
+
+### 2. **Inserting More Values into the `employees` Table**
+
+```sql
+INSERT INTO employees (name, department, salary) VALUES
+('Alice', 'Finance', 62000.00),
+('Bob', 'HR', 50000.00),
+('Charlie', 'IT', 71000.00),
+('David', 'Finance', 67000.00),
+('Emily', 'IT', 75000.00),
+('Frank', 'Finance', 64000.00),
+('Grace', 'HR', 51000.00),
+('Henry', 'IT', 79000.00),
+('Isabella', 'Finance', 70000.00),
+('Jack', 'HR', 56000.00),
+('Karen', 'IT', 85000.00),
+('Leo', 'Finance', 72000.00);
+```
+
+Now that both tables have more data, let's move on to a **complex SQL query** that combines multiple concepts.
+
+### Complex SQL Query Example
+
+Let’s create a query that:
+1. Calculates the average salary per department.
+2. Retrieves the top 3 highest-paid employees in each department.
+3. Finds students who have an `A` grade and are older than 20 years.
+4. Joins this data with the `employees` table to see if any student is also an employee, based on name.
+
+```sql
+WITH DepartmentAvgSalaries AS (
+    -- Step 1: Calculate average salary per department
+    SELECT department, AVG(salary) AS avg_salary
+    FROM employees
+    GROUP BY department
+),
+TopSalaries AS (
+    -- Step 2: Get top 3 highest-paid employees in each department
+    SELECT name, department, salary, ROW_NUMBER() OVER (PARTITION BY department ORDER BY salary DESC) AS rank
+    FROM employees
+)
+-- Step 3: Find students with A grade and age > 20
+SELECT s.name AS student_name, s.age, s.grade, e.name AS employee_name, e.department, e.salary
+FROM students s
+LEFT JOIN employees e
+    ON s.name = e.name
+WHERE s.grade = 'A' AND s.age > 20
+-- Step 4: Join with TopSalaries CTE to see if any student is also a top-paid employee
+AND e.name IN (SELECT name FROM TopSalaries WHERE rank <= 3);
+```
+
+### Explanation of the Complex Query:
+1. **`WITH DepartmentAvgSalaries`**: This CTE calculates the average salary for each department.
+2. **`WITH TopSalaries`**: This CTE assigns a rank to employees in each department based on their salary and retrieves the top 3 highest-paid employees.
+3. **`LEFT JOIN`**: We join the `students` table with the `employees` table to check if any students are also employees.
+4. **`WHERE` clause**: Filters students with an `A` grade who are older than 20 and cross-checks if their name appears in the top 3 highest-paid employees from the `employees` table.
+
+### Sample Output
+The query would return students who:
+- Have an `A` grade and are older than 20.
+- Share the same name as one of the top 3 highest-paid employees in any department.
+
+You can run this query in MySQL Workbench after setting up your `students` and `employees` tables. Would you like more explanation on any part of the query, or should we try building another complex query?

@@ -1,0 +1,40 @@
+Introduction
+Previously, you learnt about nested queries, which are used to retrieve data from multiple tables. However, as you must have noticed, a nested query refers to only one table at a time. What if you want to refer to multiple tables in a single query? In such a case, you can use joins. Joins are a handy tool for outputting data from multiple tables in a single table.
+
+ 
+
+You will also understand the set theory and some types of set operations. After this session, you will be able to perform set operations on your data using some SQL keywords. For example, you will be able to get the output of two separate queries in a single query using the 'union' operator.
+
+ 
+
+In this session
+You will learn the basics of set theory. The basic set operations are as follows:
+
+Union
+Intersection
+Difference
+You will also learn about various types of joins, such as follows:
+
+Inner join
+Left join
+Right join
+
+There are many set operations in practice, but in this segment, you will learn about union, intersection and difference. A set is a collection of distinct values. It is denoted by comma-separated values enclosed by curly braces.
+
+ 
+
+Consider two sets A and B containing even numbers and prime numbers, respectively. For ease of understanding, let's consider only values less than 10. Therefore, the sets will be A = { 2, 4, 6, 8} and B = { 2, 3, 5, 7 }.
+
+ 
+
+The union of A and B (denoted by A ∪ B) will contain all the values that are present in either A or B. Therefore, A ∪ B = { 2, 3, 4, 5, 6, 7, 8 }.
+
+ 
+
+The intersection of A and B (also denoted by A ∩ B) will contain all the values that are present in both A and B. Therefore, A ∩ B = { 2 }.
+
+ 
+
+The set difference of A and B (also denoted by A - B) will contain all the values that are present in A but not in B. Therefore, A - B = { 4, 6, 8 }.
+
+

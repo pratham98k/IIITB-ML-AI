@@ -1,0 +1,231 @@
+Database prepare
+
+CREATE TABLE students (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100),
+    age INT,
+    grade CHAR(1)
+);
+
+INSERT INTO students (name, age, grade) VALUES
+('Alice', 22, 'A'),
+('Bob', 20, 'B'),
+('Charlie', 19, 'C'),
+('David', 25, 'A'),
+('Eve', 18, 'B'),
+('Frank', 22, 'A');
+
+
+
+
+CREATE TABLE employees (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100),
+    department VARCHAR(100),
+    salary DECIMAL(10, 2)
+);
+
+INSERT INTO employees (name, department, salary) VALUES
+('John', 'HR', 55000.00),
+('Sarah', 'IT', 60000.00),
+('Mike', 'HR', 52000.00),
+('Linda', 'Finance', 65000.00),
+('James', 'IT', 70000.00),
+('Emma', 'Finance', 68000.00),
+('Robert', 'IT', 72000.00),
+('Sophia', 'HR', 48000.00);
+
+
+
+
+=========================================================================================================================
+
+Let's dive into the SQL topics with some examples. I'll guide you through each concept step by step, and after each, feel free to ask questions!
+
+### 1. **Basic SQL Query Structure**
+
+#### 1.1 `SELECT` and `FROM`
+The `SELECT` statement is used to choose the columns you want to display from a table.
+
+Example:
+```sql
+SELECT name, age 
+FROM students;
+```
+This query retrieves the `name` and `age` columns from the `students` table.
+
+#### 1.2 `WHERE` (Filtering Rows)
+You use `WHERE` to filter rows based on a condition.
+
+Example:
+```sql
+SELECT name, age 
+FROM students 
+WHERE age > 18;
+```
+This query returns only the students whose age is greater than 18.
+
+#### 1.3 `GROUP BY` (Grouping Data)
+`GROUP BY` groups rows with the same values in specified columns. It's often used with aggregate functions.
+
+Example:
+```sql
+SELECT department, COUNT(*) 
+FROM employees 
+GROUP BY department;
+```
+This query counts the number of employees in each department.
+
+#### 1.4 `HAVING` (Filtering Groups)
+`HAVING` filters groups, similar to how `WHERE` filters rows.
+
+Example:
+```sql
+SELECT department, COUNT(*) 
+FROM employees 
+GROUP BY department 
+HAVING COUNT(*) > 5;
+```
+This query returns only the departments with more than 5 employees.
+
+#### 1.5 `ORDER BY` (Sorting Results)
+`ORDER BY` sorts the results, either ascending (default) or descending.
+
+Example:
+```sql
+SELECT name, age 
+FROM students 
+ORDER BY age DESC;
+```
+This query sorts students by age in descending order.
+
+#### 1.6 `LIMIT` (Restricting the Number of Rows)
+`LIMIT` restricts the number of rows returned.
+
+Example:
+```sql
+SELECT name, age 
+FROM students 
+ORDER BY age DESC 
+LIMIT 3;
+```
+This query retrieves the 3 oldest students.
+
+---
+
+### 2. **Operators, Aggregate Functions, and Expressions**
+
+#### 2.1 **Relational and Logical Operators**
+- `=`: Equal to
+- `>`: Greater than
+- `<`: Less than
+- `AND`, `OR`: Combine conditions.
+
+Example:
+```sql
+SELECT name, age 
+FROM students 
+WHERE age > 18 AND grade = 'A';
+```
+This query retrieves students older than 18 with an 'A' grade.
+
+#### 2.2 **Arithmetic Operators**
+You can use basic math operations in SQL queries.
+
+Example:
+```sql
+SELECT name, salary * 1.1 AS new_salary 
+FROM employees;
+```
+This query increases each employee’s salary by 10% and returns the new value.
+
+#### 2.3 **Aggregate Functions**
+- `COUNT()`: Counts the rows.
+- `SUM()`: Adds values.
+- `AVG()`: Finds the average.
+- `MIN()`: Finds the minimum.
+- `MAX()`: Finds the maximum.
+
+Example:
+```sql
+SELECT AVG(salary) 
+FROM employees 
+WHERE department = 'HR';
+```
+This query calculates the average salary in the HR department.
+
+#### 2.4 **Regular Expressions**
+In SQL, you can use the `LIKE` keyword with wildcards (`%`, `_`) for pattern matching.
+
+Example:
+```sql
+SELECT name 
+FROM students 
+WHERE name LIKE 'A%';
+```
+This query returns students whose name starts with 'A'.
+
+---
+
+### 3. **Nested Queries and CTEs**
+
+#### 3.1 **Nested Queries (Subqueries)**
+A nested query is a query inside another query.
+
+Example:
+```sql
+SELECT name 
+FROM students 
+WHERE age = (SELECT MAX(age) FROM students);
+```
+This query finds the student(s) with the maximum age.
+
+#### 3.2 **Common Table Expressions (CTEs)**
+CTEs are used to define a temporary result set that can be referenced within a `SELECT`, `INSERT`, or `UPDATE`.
+
+Example:
+```sql
+WITH AverageSalaries AS (
+  SELECT department, AVG(salary) AS avg_salary
+  FROM employees
+  GROUP BY department
+)
+SELECT department 
+FROM AverageSalaries 
+WHERE avg_salary > 50000;
+```
+Here, the `WITH` statement defines a CTE called `AverageSalaries` which calculates the average salary per department. Then, the main query selects departments where the average salary is above $50,000.
+
+---
+
+### 4. **Views and Their Advantages Over CTEs**
+
+#### 4.1 **Views**
+A view is a saved SQL query that can be reused like a table.
+
+Example:
+```sql
+CREATE VIEW high_salary_employees AS 
+SELECT name, salary 
+FROM employees 
+WHERE salary > 60000;
+```
+You can now query `high_salary_employees` like this:
+```sql
+SELECT * FROM high_salary_employees;
+```
+
+#### 4.2 **Advantages of Views Over CTEs**
+- **Persistence**: Views are saved in the database and can be reused anytime, while CTEs are temporary and exist only for the duration of the query.
+- **Security**: Views can hide complex joins or specific columns, restricting user access.
+- **Optimization**: Views are precompiled, which can improve performance.
+
+---
+
+### Summary
+- **Basic Queries**: We covered how to select, filter, group, sort, and limit data.
+- **Operators and Functions**: You learned about logical, arithmetic, and aggregate functions, and how to use regular expressions for pattern matching.
+- **Nested Queries and CTEs**: We explored how to create subqueries and CTEs for complex queries.
+- **Views**: Views offer persistence and security advantages over CTEs.
+
+Would you like to work on some practice queries now, or do you have questions on any of these concepts?
