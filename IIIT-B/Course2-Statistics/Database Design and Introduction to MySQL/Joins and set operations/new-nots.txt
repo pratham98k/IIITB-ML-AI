@@ -1,0 +1,198 @@
+Let's go through the topics you mentioned one by one. I'll start by creating an example table and then demonstrate each of the topics.
+
+### Example Table: `employees`
+
+```sql
+CREATE TABLE employees (
+    employee_id INT PRIMARY KEY,
+    first_name VARCHAR(50),
+    last_name VARCHAR(50),
+    department VARCHAR(50),
+    salary DECIMAL(10,2),
+    age INT
+);
+
+INSERT INTO employees (employee_id, first_name, last_name, department, salary, age) VALUES
+(1, 'John', 'Doe', 'HR', 55000, 28),
+(2, 'Jane', 'Smith', 'Finance', 75000, 34),
+(3, 'Bob', 'Johnson', 'IT', 92000, 40),
+(4, 'Alice', 'Brown', 'HR', 62000, 29),
+(5, 'Tom', 'Hanks', 'Finance', 67000, 38),
+(6, 'Jerry', 'Williams', 'IT', 56000, 27);
+```
+
+Now, let's move to each of the topics.
+
+---
+
+### 1. **Relational, Arithmetic, and Logical Operators**
+
+#### Relational Operators
+- `=`, `!=`, `>`, `<`, `>=`, `<=`
+
+**Example: Find all employees with a salary greater than 60000**
+```sql
+SELECT * FROM employees WHERE salary > 60000;
+```
+
+#### Arithmetic Operators
+- `+`, `-`, `*`, `/`, `%`
+
+**Example: Add a 10% bonus to each employee's salary**
+```sql
+SELECT first_name, last_name, salary, salary * 1.10 AS salary_with_bonus FROM employees;
+```
+
+#### Logical Operators
+- `AND`, `OR`, `NOT`
+
+**Example: Find employees in the 'Finance' department with a salary greater than 65000**
+```sql
+SELECT * FROM employees WHERE department = 'Finance' AND salary > 65000;
+```
+
+---
+
+### 2. **Aggregate Functions**
+- `COUNT()`, `SUM()`, `AVG()`, `MIN()`, `MAX()`
+
+**Example: Get the total and average salary of employees**
+```sql
+SELECT SUM(salary) AS total_salary, AVG(salary) AS avg_salary FROM employees;
+```
+
+---
+
+### 3. **Regular Expressions**
+- MySQL uses `REGEXP` to apply regex-based pattern matching.
+
+**Example: Find employees whose first name starts with 'J'**
+```sql
+SELECT * FROM employees WHERE first_name REGEXP '^J';
+```
+
+---
+
+### 4. **Nested Queries (Subqueries)**
+
+**Example: Find employees whose salary is above the average salary**
+```sql
+SELECT * FROM employees
+WHERE salary > (SELECT AVG(salary) FROM employees);
+```
+
+---
+
+### 5. **Common Table Expressions (CTEs)**
+
+**Example: Use a CTE to find employees older than 30**
+```sql
+WITH OlderEmployees AS (
+    SELECT * FROM employees WHERE age > 30
+)
+SELECT * FROM OlderEmployees;
+```
+
+---
+
+### 6. **Views**
+
+**Example: Create a view to show only HR department employees**
+```sql
+CREATE VIEW HR_Employees AS
+SELECT employee_id, first_name, last_name, salary FROM employees WHERE department = 'HR';
+
+-- Querying the view
+SELECT * FROM HR_Employees;
+```
+
+---
+
+### 7. **Advantages of Views Over CTEs**
+
+- **Views** are persistent database objects that can be reused across multiple queries, while **CTEs** are only temporary for the duration of the query.
+- Views can simplify complex queries, help with security by exposing limited data, and improve code reuse.
+  
+**Example: A view can be reused anytime, while a CTE is query-specific.**
+
+---
+
+### 8. **Union**
+
+**Example: Combine employees from IT and Finance departments**
+```sql
+SELECT first_name, last_name, department FROM employees WHERE department = 'IT'
+UNION
+SELECT first_name, last_name, department FROM employees WHERE department = 'Finance';
+```
+
+---
+
+### 9. **Intersection**
+Since MySQL doesn't have an explicit `INTERSECT`, you can achieve it using `INNER JOIN` or subqueries.
+
+**Example: Find employees in both IT and Finance departments (this case, no overlap exists, but it's the pattern)**
+```sql
+SELECT first_name, last_name, department FROM employees WHERE department = 'IT'
+AND department IN (SELECT department FROM employees WHERE department = 'Finance');
+```
+
+---
+
+### 10. **Difference**
+
+**Example: Employees in IT but not in Finance**
+```sql
+SELECT first_name, last_name, department FROM employees WHERE department = 'IT'
+AND department NOT IN (SELECT department FROM employees WHERE department = 'Finance');
+```
+
+---
+
+### 11. **Inner Join**
+
+**Example: Suppose we have another table `projects`**
+
+```sql
+CREATE TABLE projects (
+    project_id INT PRIMARY KEY,
+    project_name VARCHAR(50),
+    employee_id INT
+);
+
+INSERT INTO projects (project_id, project_name, employee_id) VALUES
+(1, 'Project Alpha', 2),
+(2, 'Project Beta', 3),
+(3, 'Project Gamma', 5);
+
+-- Query for inner join
+SELECT employees.first_name, projects.project_name 
+FROM employees
+INNER JOIN projects ON employees.employee_id = projects.employee_id;
+```
+
+---
+
+### 12. **Left Join**
+
+**Example: Left join to show all employees and their projects (if they have one)**
+```sql
+SELECT employees.first_name, projects.project_name 
+FROM employees
+LEFT JOIN projects ON employees.employee_id = projects.employee_id;
+```
+
+---
+
+### 13. **Right Join**
+
+**Example: Right join to show all projects and their assigned employees (if any)**
+```sql
+SELECT employees.first_name, projects.project_name 
+FROM employees
+RIGHT JOIN projects ON employees.employee_id = projects.employee_id;
+```
+
+---
+
+These examples cover the basics of each topic with practical use cases. Would you like to dive deeper into any specific area?
