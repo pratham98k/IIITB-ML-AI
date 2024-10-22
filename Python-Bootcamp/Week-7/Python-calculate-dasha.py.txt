@@ -1,0 +1,58 @@
+from datetime import datetime
+from math import floor
+
+# Birth details
+birth_date = datetime(1991, 12, 12, 9, 32)
+
+# Current date
+current_date = datetime(2024, 10, 19)
+
+# Vimshottari Dasha system total years for each planet
+dasha_years = {
+    'Ketu': 7, 'Venus': 20, 'Sun': 6, 'Moon': 10, 'Mars': 7, 
+    'Rahu': 18, 'Jupiter': 16, 'Saturn': 19, 'Mercury': 17
+}
+
+# Total duration of Vimshottari cycle
+total_dasha_years = sum(dasha_years.values())
+
+# Calculate age of person in days
+age_in_days = (current_date - birth_date).days
+
+# Days in one Vimshottari cycle (120 years)
+total_dasha_days = total_dasha_years * 365.25
+
+# Calculate the elapsed days in the current cycle
+elapsed_days_in_cycle = age_in_days % total_dasha_days
+
+# Vimshottari cycle sequence
+dasha_sequence = ['Ketu', 'Venus', 'Sun', 'Moon', 'Mars', 'Rahu', 'Jupiter', 'Saturn', 'Mercury']
+
+# Calculate the current Mahadasha and Antardasha
+remaining_days = elapsed_days_in_cycle
+current_dasha = ""
+dasha_start_days = {}
+
+# Calculate when each dasha started and ended
+for planet in dasha_sequence:
+    dasha_duration_in_days = dasha_years[planet] * 365.25
+    dasha_start_days[planet] = remaining_days
+    if remaining_days < dasha_duration_in_days:
+        current_dasha = planet
+        break
+    remaining_days -= dasha_duration_in_days
+
+# Calculate Antardasha within the Mahadasha
+remaining_days_in_dasha = remaining_days
+antardasha_sequence = dasha_sequence  # Antardasha follows same sequence as Mahadasha
+antardasha_duration = {k: v * dasha_years[current_dasha] / total_dasha_years for k, v in dasha_years.items()}
+
+current_antardasha = ""
+for planet in antardasha_sequence:
+    antardasha_duration_in_days = antardasha_duration[planet] * 365.25
+    if remaining_days_in_dasha < antardasha_duration_in_days:
+        current_antardasha = planet
+        break
+    remaining_days_in_dasha -= antardasha_duration_in_days
+
+current_dasha, current_antardasha
