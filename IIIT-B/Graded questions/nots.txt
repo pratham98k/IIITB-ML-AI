@@ -1,0 +1,43 @@
+To determine the size of the vocabulary after removing stop words, we need to follow these steps:
+
+1. Load the training dataset.
+2. Preprocess the text by removing stop words.
+3. Tokenize the text to create a vocabulary.
+4. Count the unique tokens in the vocabulary.
+
+Here's a Python script to achieve this using the `nltk` library for stop words and `CountVectorizer` from `sklearn` for tokenization:
+
+```python
+import pandas as pd
+from sklearn.feature_extraction.text import CountVectorizer
+from nltk.corpus import stopwords
+import nltk
+
+# Download stopwords from nltk
+nltk.download('stopwords')
+
+# Load the training dataset
+train_data = pd.read_csv('movie_review_train.csv')
+
+# Combine all reviews into a single list
+reviews = train_data['text'].tolist()
+
+# Initialize CountVectorizer with stop words
+vectorizer = CountVectorizer(stop_words=stopwords.words('english'))
+
+# Fit the vectorizer on the training data
+vectorizer.fit(reviews)
+
+# Get the size of the vocabulary
+vocab_size = len(vectorizer.vocabulary_)
+
+print(f"The size of the vocabulary after removing stop words is: {vocab_size}")
+```
+
+Make sure you have the necessary libraries installed. You can install them using pip if you haven't already:
+
+```bash
+pip install pandas scikit-learn nltk
+```
+
+This script will output the size of the vocabulary after removing stop words. Note that the actual size may vary slightly depending on the preprocessing steps and the specific stop words list used.
