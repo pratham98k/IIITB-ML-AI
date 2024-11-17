@@ -1,0 +1,53 @@
+To determine the size of the vocabulary after removing stop words using a Naive Bayes text classification model, we can follow these steps:
+
+1. Load the training dataset.
+2. Preprocess the text by removing stop words.
+3. Tokenize the text to create a vocabulary.
+4. Train a Naive Bayes classifier.
+5. Count the unique tokens in the vocabulary.
+
+Here's a complete Python script to achieve this using `nltk` for stop words, `CountVectorizer` from `sklearn` for tokenization, and `MultinomialNB` for the Naive Bayes classifier:
+
+```python
+import pandas as pd
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.naive_bayes import MultinomialNB
+from nltk.corpus import stopwords
+import nltk
+
+# Download stopwords from nltk
+nltk.download('stopwords')
+
+# Load the training dataset
+train_data = pd.read_csv('movie_review_train.csv')
+
+# Tag negative (Neg) as 0 and positive (Pos) as 1
+train_data['class'] = train_data['class'].apply(lambda x: 1 if x == 'Pos' else 0)
+
+# Combine all reviews into a single list
+reviews = train_data['text'].tolist()
+
+# Initialize CountVectorizer with stop words
+vectorizer = CountVectorizer(stop_words=stopwords.words('english'))
+
+# Fit the vectorizer on the training data and transform the text data to feature vectors
+X_train = vectorizer.fit_transform(reviews)
+y_train = train_data['class']
+
+# Train a Naive Bayes classifier
+clf = MultinomialNB()
+clf.fit(X_train, y_train)
+
+# Get the size of the vocabulary
+vocab_size = len(vectorizer.vocabulary_)
+
+print(f"The size of the vocabulary after removing stop words is: {vocab_size}")
+```
+
+Make sure you have the necessary libraries installed. You can install them using pip if you haven't already:
+
+```bash
+pip install pandas scikit-learn nltk
+```
+
+This script will output the size of the vocabulary after removing stop words using only the training set. Note that the actual size may vary slightly depending on the preprocessing steps and the specific stop words list used
